@@ -41,7 +41,7 @@ class TestPlace(unittest.TestCase):
 
     def test_is_subclass(self):
         self.assertTrue(issubclass(self.place1.__class__, BaseModel), True)
-        
+
     def test_checking_for_functions(self):
         self.assertIsNotNone(Place.__doc__)
 
@@ -73,7 +73,7 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(type(self.place1.latitude), float)
         self.assertEqual(type(self.place1.longitude), float)
         self.assertEqual(type(self.place1.amenity_ids), list)
-        
+
     def test_save(self):
         self.place1.save()
         self.assertNotEqual(self.place1.created_at, self.amenity1.updated_at)

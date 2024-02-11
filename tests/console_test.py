@@ -33,8 +33,6 @@ class TestConsole(unittest.TestCase):
         """Remove temporary file (file.json) created as a result"""
         try:
             os.remove("file.json")
-        except:
-            pass
 
     """Check for Pep8 style conformance"""
     def test_pep8_console(self):
@@ -170,5 +168,4 @@ class TestConsole(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    
     unittest.main()

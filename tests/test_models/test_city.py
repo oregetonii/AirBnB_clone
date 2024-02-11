@@ -32,7 +32,7 @@ class TestCity(unittest.TestCase):
 
     def test_is_subclass(self):
         self.assertTrue(issubclass(self.city1.__class__, BaseModel), True)
-        
+
     def test_checking_for_functions(self):
         self.assertIsNotNone(City.__doc__)
 
@@ -46,7 +46,7 @@ class TestCity(unittest.TestCase):
     def test_attributes_are_strings(self):
         self.assertEqual(type(self.city1.name), str)
         sel.assertEqual(type(self.city1.state_id), str)
-        
+
     def test_save(self):
         self.city1.save()
         self.assertNotEqual(self.city1.created_at, self.city1.updated_at)

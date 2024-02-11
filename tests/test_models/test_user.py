@@ -34,7 +34,7 @@ class TestUser(unittest.TestCase):
 
     def test_is_subclass(self):
         self.assertTrue(issubclass(self.my_user.__class__, BaseModel), True)
-        
+
     def test_checking_for_functions(self):
         self.assertIsNotNone(User.__doc__)
 
@@ -49,7 +49,7 @@ class TestUser(unittest.TestCase):
 
     def test_attributes_are_strings(self):
         self.assertEqual(type(self.my_user.name), str)
-        
+
     def test_save(self):
         self.my_user.save()
         self.assertNotEqual(self.my_user.created_at, self.my_user.updated_at)
