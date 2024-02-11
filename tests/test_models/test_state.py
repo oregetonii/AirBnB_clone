@@ -31,7 +31,7 @@ class TestState(unittest.TestCase):
 
     def test_is_subclass(self):
         self.assertTrue(issubclass(self.state1.__class__, BaseModel), True)
-        
+
     def test_checking_for_functions(self):
         self.assertIsNotNone(State.__doc__)
 
@@ -43,7 +43,7 @@ class TestState(unittest.TestCase):
 
     def test_attributes_are_strings(self):
         self.assertEqual(type(self.state1.name), str)
-        
+
     def test_save(self):
         self.state1.save()
         self.assertNotEqual(self.state1.created_at, self.state1.updated_at)

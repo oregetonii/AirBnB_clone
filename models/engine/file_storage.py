@@ -9,12 +9,13 @@ from models.review import Review
 from models.state import State
 from models.user import User
 
+
 class FileStorage:
     '''serializes and deserialzes json files'''
 
     __file_path = 'file.json'
     __objects = {}
-    class_dict = {"Amenity":Amenity, "BaseModel":BaseModel, "City": City,
+    class_dict = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
                   "Place": Place, "Review": Review, "State": State,
                   "User": User}
 

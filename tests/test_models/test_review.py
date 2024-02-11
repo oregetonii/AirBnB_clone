@@ -33,7 +33,7 @@ class TestReview(unittest.TestCase):
 
     def test_is_subclass(self):
         self.assertTrue(issubclass(self.rev1.__class__, BaseModel), True)
-        
+
     def test_checking_for_functions(self):
         self.assertIsNotNone(Review.__doc__)
 
@@ -49,7 +49,7 @@ class TestReview(unittest.TestCase):
         self.assertEqual(type(self.rev1.place_id), str)
         self.assertEqual(type(self.rev1.user_id), str)
         self.assertEqual(type(self.rev1.text), str)
-        
+
     def test_save(self):
         self.rev1.save()
         self.assertNotEqual(self.rev1.created_at, self.rev1.updated_at)
